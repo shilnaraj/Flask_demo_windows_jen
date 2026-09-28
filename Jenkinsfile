@@ -6,7 +6,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat 'python -m venv venv'
-                bat 'venv\\Scripts\\pip install -r requirement.txt'
+                bat 'venv\\Scripts\\pip install -r requirements.txt'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 bat 'if not exist build mkdir build'
                 bat 'copy app.py build\\'
-                bat 'copy requirement.txt build\\'
+                bat 'copy requirements.txt build\\'
             }
         }
     }
